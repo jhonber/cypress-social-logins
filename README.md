@@ -15,6 +15,11 @@
   <a href="https://github.com/nodejs/security-wg/blob/master/processes/responsible_disclosure_template.md"><img src="https://img.shields.io/badge/Security-Responsible%20Disclosure-yellow.svg" alt="Security Responsible Disclosure" /></a>
 </p>
 
+
+## About this fork
+
+Add piece of code to allow login on _google account_ using **headless** mode in **Google Chrome**, for some reason after login, the flow to get token is interrupted, after try different solutions, one way to make it works, is go to initial login page and then click again on **loginSelector** google button.
+
 # About
 
 This Cypress library makes it possible to perform third-party logins (think oauth) for services such as GitHub, Google or Facebook.

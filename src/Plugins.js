@@ -201,6 +201,12 @@ async function baseLoginConnect(typeUsername, typePassword, authorizeApp, postLo
     await delay(options.cookieDelay)
   }
 
+  if (options.relogin) {
+    page = await browser.newPage();
+    await page.goto(options.loginUrl);
+    await login({ page, options });
+  }
+
   const cookies = await getCookies({page, options})
   const lsd = await getLocalStorageData({page, options})
   const ssd = await getSessionStorageData({page, options})
